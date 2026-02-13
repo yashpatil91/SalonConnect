@@ -117,7 +117,7 @@
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="mb-6">
-        <a href="search-salon.jsp" class="text-primary hover:underline flex items-center">
+        <a href="services.jsp" class="text-primary hover:underline flex items-center">
             <span class="material-icons mr-1">arrow_back</span> Back to Search
         </a>
     </div>
@@ -190,7 +190,7 @@
                     <div class="bg-background-light dark:bg-background-dark rounded-2xl p-4 border border-gray-200 dark:border-gray-700">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="font-bold text-gray-900 dark:text-white"><%= serviceName %></h3>
-                            <span class="bg-primary/20 text-primary px-2 py-1 rounded-full text-xs font-bold">$<%= String.format("%.2f", price) %></span>
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded-full text-xs font-bold">₹<%= String.format("%.2f", price) %></span>
                         </div>
                         <p class="text-gray-500 dark:text-gray-400 text-sm mb-2"><%= serviceDesc != null ? serviceDesc : "" %></p>
                         <div class="flex items-center text-gray-600 dark:text-gray-300 text-sm">
@@ -252,31 +252,44 @@
               
         %>
 
-        <div class="bg-background-light dark:bg-background-dark rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 overflow-hidden">
-        <img src="<%= finalImageUrl %>"
-         alt="<%= tName %>"
-         onerror="this.src='<%= request.getContextPath() %>/images/default-therapist.jpg'"
-         class="w-full h-48 object-cover">
+        <div class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 p-5 flex items-start gap-4 hover:shadow-lg transition-all duration-300">
 
-       <div class="p-4">
+    <!-- Therapist Image -->
+    <div class="flex-shrink-0">
+        <img src="<%= finalImageUrl %>"
+             alt="<%= tName %>"
+             onerror="this.src='<%= request.getContextPath() %>/images/default-therapist.jpg'"
+             class="w-20 h-20 rounded-full object-cover border-2 border-primary shadow-sm">
+    </div>
+
+    <!-- Therapist Info -->
+    <div class="flex-1">
+
+        <!-- Name -->
         <h3 class="text-lg font-bold text-gray-900 dark:text-white">
             <%= tName %>
         </h3>
 
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+        <!-- Role / Specialization -->
+        <p class="text-primary font-semibold text-sm uppercase tracking-wide">
             <%= specialization != null ? specialization : "Professional Therapist" %>
         </p>
 
-        <div class="flex items-center text-sm mb-2">
-            <span class="material-icons text-yellow-400 mr-1 text-base">star</span>
-            <span class="font-bold"><%= String.format("%.1f", tRating) %></span>
+        <!-- Rating -->
+        <div class="flex items-center gap-1 text-sm mt-1 mb-2">
+            <span class="material-icons text-yellow-400 text-base">star</span>
+            <span class="font-bold text-gray-800 dark:text-gray-200">
+                <%= String.format("%.1f", tRating) %>
+            </span>
         </div>
 
-        <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
-            <span class="material-icons mr-1 text-base">phone</span>
-            <%= tPhone != null ? tPhone : "Not available" %>
-        </div>
+        <!-- Description Placeholder (Optional if you add later) -->
+        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+            Experienced specialist dedicated to delivering high-quality treatments and personalized care.
+        </p>
+
     </div>
+
 </div>
 
         
