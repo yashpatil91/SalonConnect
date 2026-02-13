@@ -120,7 +120,8 @@ h1, h2, h3, h4, h5, h6 {
 							<div class="relative">
 								<span class="material-icons absolute left-3 top-3 text-gray-400">person</span>
 								<input id="name" name="name" type="text" required
-									pattern="[A-Za-z]{2,}"
+									pattern="^[A-Za-z ]{2,}$"
+
 									class="pl-10 w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent"
 									placeholder="Enter your full name" />
 							</div>

@@ -57,9 +57,8 @@ String userName = (String) session.getAttribute("userName");
             font-family: 'Inter', sans-serif;
         }
         .sidebar-active {
-            background-color: rgba(217, 119, 6, 0.1);
-            color: #D97706;
-            border-right: 3px solid #D97706;
+           background-color: #eab8a3;
+    color: #1f2937;
         }
     </style>
 </head>
