@@ -97,6 +97,13 @@ type="text/tailwindcss">
 					class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100">
 					Earnings
 				</a> 
+				 <a href="#"
+					class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100">
+					Settings
+				</a> 
+				<a href="<%=request.getContextPath()%>/therapist/my-applications"
+				class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100">
+					My Applications </a>
 					
 					<!-- Logout Button -->
 					<div class="flex-1 p-4 overflow-y-auto">
@@ -132,7 +139,7 @@ type="text/tailwindcss">
 
 
 			
-		<div class="flex justify-between items-center mb-10">
+		<div class="flex justify-between items-center">
 				<span class="text-sm text-gray-500">
 				Welcome, ${sessionScope.userName}
 			</span>

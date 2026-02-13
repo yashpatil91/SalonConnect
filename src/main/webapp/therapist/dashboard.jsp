@@ -66,7 +66,7 @@
         }
         .sidebar-item-active::after {
             content: '';
-            @apply absolute right-0 top-0 bottom-0 w-1.5 bg-primary rounded-l-md;
+            @apply absolute right-0 top-0 bottom-0 w-1.5  rounded-l-md;
         }
         .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
