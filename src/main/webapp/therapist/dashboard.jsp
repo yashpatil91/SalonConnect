@@ -15,6 +15,9 @@
 <meta charset="utf-8" />
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <title>Therapist Dashboard - SalonConnect</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
 <script
 	src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
 <link
@@ -84,8 +87,8 @@
 			class="w-64 bg-sidebar-bg dark:bg-surface-dark border-r border-gray-100 dark:border-gray-800 flex flex-col z-20 shadow-soft">
 			<div class="p-8 flex items-center mb-2">
 				<span class="material-symbols-outlined text-primary text-3xl mr-2">spa</span>
-				<span
-					class="font-display font-bold text-xl text-gray-900 dark:text-white leading-none tracking-tight">SalonConnect</span>
+				<a href="<%= request.getContextPath() %>/index.jsp"
+						class="font-display font-bold text-2xl text-gray-900 dark:text-white">SalonConnect</a>
 			</div>
 			<nav
 				class="flex-1 px-6 space-y-4 overflow-y-auto custom-scrollbar pt-4">
@@ -163,17 +166,7 @@
 
 				</div>
 				<div class="flex items-center space-x-6">
-					<div
-						class="flex items-center bg-white dark:bg-surface-dark px-5 py-2 rounded-full shadow-sm border border-gray-100 dark:border-gray-700">
-						<span
-							class="text-sm font-medium mr-3 text-gray-600 dark:text-gray-300">Available
-							for walk-ins</span> <label
-							class="relative inline-flex items-center cursor-pointer">
-							<input checked="" class="sr-only peer" type="checkbox" />
-							<div
-								class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-secondary"></div>
-						</label>
-					</div>
+					
 
 					<!-- button for dark and white mode  -->
 					<button
@@ -191,9 +184,6 @@
 							class="absolute top-2 right-2 w-2 h-2 bg-red-400 rounded-full border border-white"></span>
 					</button>
 
-					<button>
-						<spam class="material-symbols-outlined">account_circle</spam>
-					</button>
 
 					<!-- button for home  -->
 					<button>
@@ -489,57 +479,7 @@
 
 
 
-						<div
-							class="bg-surface-light dark:bg-surface-dark p-8 rounded-[2rem] border border-transparent shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-							<div class="mb-8">
-								<div class="flex items-center mb-5">
-									<img alt="Client"
-										class="w-12 h-12 rounded-full mr-4 border border-gray-100 shadow-sm"
-										src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6ivLk6oejRPf6q9isd6KyqV6zNpzrb4tPQdGSCx3xx30lw-WyKc6-ND-qkoU1VaafM63ZrX6Mq4y_1C7RrsbOXstagt8vbiszAELGmE9_20MNHpNWJbMtbdG5cdTVGTUXh_umOMQa-CjOJgKt9Jct3nzUkYf1Spvti7FDgQyjZ3E1-fAY4EDG2V0vPB7itk1uubkvyS6IyDaq-3H5CaSWyYUo80qoILeAQEISM5SmssE4rnQF1wyCnW05YdyuOElFmQqUqC6ktNah" />
-									<div>
-										<h4 class="font-bold text-gray-900 dark:text-white text-base">Sarah
-											Jenkins</h4>
-										<p class="text-xs text-gray-400">Frequent Client</p>
-									</div>
-								</div>
-								<div
-									class="bg-background-light dark:bg-background-dark p-5 rounded-2xl border border-gray-50 dark:border-gray-700 relative">
-									<span
-										class="absolute -top-3 left-6 text-4xl text-primary/20 font-serif">"</span>
-									<p
-										class="text-sm text-gray-600 dark:text-gray-300 italic leading-relaxed pt-2">
-										Prefers lavender scent. Sensitive to high pressure on the
-										lower back area. First time deep tissue client.</p>
-								</div>
-							</div>
-							<div
-								class="space-y-6 pt-6 border-t border-gray-100 dark:border-gray-700">
-								<h4
-									class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Recent
-									Activity</h4>
-								<div class="flex items-start space-x-4">
-									<div
-										class="w-2 h-2 rounded-full bg-secondary mt-1.5 shadow-[0_0_0_4px_rgba(143,188,143,0.2)]"></div>
-									<p
-										class="text-sm text-gray-600 dark:text-gray-400 leading-snug">
-										<span class="font-bold text-gray-900 dark:text-white">Jessica
-											Moore</span> gave a 5-star review for Swedish Massage.
-									</p>
-								</div>
-								<div class="flex items-start space-x-4">
-									<div
-										class="w-2 h-2 rounded-full bg-primary mt-1.5 shadow-[0_0_0_4px_rgba(216,164,143,0.2)]"></div>
-									<p
-										class="text-sm text-gray-600 dark:text-gray-400 leading-snug">
-										<span class="font-bold text-gray-900 dark:text-white">Michael
-											Chen</span> rescheduled for 01:00 PM.
-									</p>
-								</div>
-							</div>
-							<button
-								class="w-full mt-8 py-3.5 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-bold text-sm rounded-xl hover:bg-primary/10 hover:text-primary transition-all">
-								View Full History</button>
-						</div>
+						
 						
 					</div>
 				</div>
