@@ -38,7 +38,7 @@
 <a href="${pageContext.request.contextPath}/services.jsp"
    class="nav-link !text-gray-900 dark:!text-white hover:!text-primary dark:hover:text-primary
     ${fn:endsWith(pageContext.request.requestURI, '/services.jsp') ? 'active' : ''}">
-   Services
+   Explore Salons
 </a>
 
 
