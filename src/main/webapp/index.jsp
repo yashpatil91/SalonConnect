@@ -277,7 +277,7 @@
 .salon-track {
   display: flex;
   gap: 20px;
-  animation: scroll 25s linear infinite;
+  animation: scroll 40s linear infinite;
   width: max-content;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -468,13 +468,10 @@ style="background-image: url('https://images.unsplash.com/photo-1621605815971-fb
      </div>
 
 
-		   <div class="salon-slider">
-<div class="salon-track">
 
 
-</div>
 <div class="salon-slider">
-<div class="salon-track grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="salon-track">
  <%
             Connection con = null;
             PreparedStatement ps = null;
@@ -581,6 +578,10 @@ try {
                 try { if (con != null) con.close(); } catch (Exception ignored) {}
             }
         %>
+
+
+
+</div>        
 </div>
 </div>
 <div class="mt-8 text-center md:hidden">

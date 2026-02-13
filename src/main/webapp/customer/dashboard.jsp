@@ -103,7 +103,7 @@ String userName = (String) session.getAttribute("userName");
 <span class="text-sm font-medium">Appearance</span>
 <span class="material-icons-round text-primary text-xl">dark_mode</span>
 </button>
-<button class="w-full bg-red-500 hover:bg-red-600 text-white flex items-center justify-center space-x-2 py-3 rounded-xl transition-all shadow-lg shadow-red-500/20">
+<button class="w-full bg-red-500 hover:bg-red-600 text-white flex items-center justify-center space-x-2 py-1 rounded-xl transition-all shadow-lg shadow-red-500/20">
   <a href="<%= request.getContextPath() %>/logout" class="px-4 py-2 rounded-full text-sm font-bold text-white bg-red-500 hover:bg-red-600">Logout</a>
 </button>
 </div>
@@ -247,7 +247,7 @@ try {
 
 
  
-<div class="lg:col-span-2 bg-slate-900 dark:bg-stone-900 rounded-2xl p-8 relative overflow-hidden shadow-xl text-white">
+<div class="lg:col-span-2 bg-slate-900 dark:bg-stone-900 rounded-2xl p-5 relative overflow-hidden shadow-xl text-white">
 
 <div class="relative z-10">
 
@@ -308,7 +308,7 @@ try {
 </div>
 </div>
 </div>
-<div class="bg-primary rounded-2xl p-8 flex flex-col justify-between text-white shadow-xl shadow-primary/20">
+<div class="bg-primary rounded-2xl p-7 flex flex-col justify-between text-white shadow-xl shadow-primary/20">
 <div>
 <h3 class="text-2xl font-display font-bold mb-3 leading-tight">Book your next self-care session.</h3>
 <p class="text-white/80 text-sm">Treat yourself to the premium experience you deserve.</p>

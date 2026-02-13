@@ -388,7 +388,7 @@ g{
 <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <!-- Left: Image -->
 <div class="relative rounded-[40px] overflow-hidden shadow-2xl lg:order-1 order-2 h-full min-h-[500px]">
-<img alt="Salon Interior" class="w-full h-full object-cover" src="${pageContext.request.contextPath}/images/cutting1.jpg"/>
+<img alt="Salon Interior" class="w-full h-full object-cover" src="${pageContext.request.contextPath}/images/cutting.jpg"/>
 </div>
 <!-- Right: Content -->
 <div class="flex flex-col gap-6 lg:order-2 order-1 lg:pl-10">
@@ -559,7 +559,7 @@ g{
     <div class="video-split">
       <!-- Left: Image -->
 <div class="image-left">
-    <img src="${pageContext.request.contextPath}/images/aboutmission.jpg" alt="Salon Journey">
+    <img src="${pageContext.request.contextPath}/images/aboutimage.jpg" alt="Salon Journey">
 </div>
 
       <!-- Right: Content -->
