@@ -105,7 +105,8 @@
                             ps.setInt(1, salonId);
                             rs = ps.executeQuery();
 
-                            while (rs.next()) {
+                            while (rs.next()) 
+                            {
                                 int serviceId = rs.getInt("id");
                                 String serviceName = rs.getString("name");
                                 double price = rs.getDouble("price");

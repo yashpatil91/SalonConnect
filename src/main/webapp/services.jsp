@@ -263,10 +263,12 @@ try {
         serviceCount++;
 
         int serviceId = rs2.getInt("id");
+        
         String serviceName = rs2.getString("name");
         double price = rs2.getDouble("price");
         String duration = rs2.getString("duration");
         String image = rs2.getString("image_url");
+        
 
         if (image == null || image.trim().equals("")) {
             image = "images/default-service.jpg";
@@ -299,10 +301,10 @@ try {
         </p>
 
         <!-- Button -->
-        <a href="book-service.jsp?id=<%= serviceId %>"
-           class="block text-center w-full py-2.5 rounded-xl bg-primary/10 text-primary font-bold text-sm hover:bg-primary hover:text-white transition-colors">
-            Book Now
-        </a>
+        <a href="book-service.jsp?serviceId=<%= serviceId %>"
+		   class="block text-center w-full py-2.5 rounded-xl bg-primary/10 text-primary font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+		    Book Now
+		</a>
 
     </div>
 
