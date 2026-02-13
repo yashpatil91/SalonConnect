@@ -111,7 +111,7 @@
                                 double price = rs.getDouble("price");
                                 int duration = rs.getInt("duration");
                     %>
-                    <option value="<%= serviceId %>"><%= serviceName %> - $<%= String.format("%.2f", price) %> (<%= duration %> min)</option>
+                    <option value="<%= serviceId %>"><%= serviceName %> - ₹<%= String.format("%.2f", price) %> (<%= duration %> min)</option>
                     <%
                             }
                         } catch (Exception e) {

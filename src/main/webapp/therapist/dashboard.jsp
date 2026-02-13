@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="com.dao.DBConnection"%>
 
 
 <%@page
@@ -137,10 +139,9 @@
 					</div>
 					<div class="ml-3 overflow-hidden">
 						<p
-							class="text-sm font-bold text-gray-900 dark:text-white truncate">Elena
-							Gilbert</p>
-						<p class="text-xs text-gray-400 truncate font-medium">Lead
-							Massage Therapist</p>
+							class="text-sm font-bold text-gray-900 dark:text-white truncate">${therapist.name}</p>
+						<p class="text-xs text-gray-400 truncate font-medium">
+							Therapist</p>
 					</div>
 				</div>
 			</div>
@@ -175,14 +176,15 @@
 					</div>
 
 					<!-- button for dark and white mode  -->
-										<button id="theme-toggle"
-						class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400">
-						<span class="material-symbols-outlined">dark_mode</span>
+					<button
+						class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400"
+						id="theme-toggle">
+						<span class="material-icons">brightness_4</span>
 					</button>
-					
-					</button>
-					
-										
+
+				
+
+
 					<button
 						class="p-2 text-gray-400 hover:text-primary transition-colors relative">
 						<span class="material-symbols-outlined">notifications</span> <span
@@ -538,29 +540,7 @@
 								class="w-full mt-8 py-3.5 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-bold text-sm rounded-xl hover:bg-primary/10 hover:text-primary transition-all">
 								View Full History</button>
 						</div>
-						<div
-							class="bg-gray-900 text-white p-8 rounded-[2rem] shadow-2xl shadow-gray-200 dark:shadow-none relative overflow-hidden">
-							<div
-								class="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
-							<div
-								class="absolute bottom-0 left-0 -ml-16 -mb-16 w-32 h-32 bg-secondary/10 rounded-full blur-2xl"></div>
-							<h3 class="font-display font-bold text-xl mb-6 relative z-10">Availability</h3>
-							<div
-								class="grid grid-cols-7 gap-3 text-center text-[10px] mb-3 font-bold text-gray-500 uppercase tracking-wider relative z-10">
-								<span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
-							</div>
-							<div
-								class="grid grid-cols-7 gap-3 text-center text-sm relative z-10">
-								<span
-									class="p-2 text-primary font-bold bg-primary/20 rounded-xl">24</span>
-								<span class="p-2 text-gray-300">25</span> <span
-									class="p-2 text-gray-300">26</span> <span
-									class="p-2 text-gray-300">27</span> <span
-									class="p-2 font-bold bg-white/10 rounded-xl text-white">28</span>
-								<span class="p-2 opacity-30">29</span> <span
-									class="p-2 opacity-30">30</span>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -569,10 +549,10 @@
 
 
 	<script>
-		        const themeToggleBtn = document.getElementById('theme-toggle');
+		const themeToggleBtn = document.getElementById('theme-toggle');
 		const darkIcon = '<span class="material-icons">dark_mode</span>';
 		const lightIcon = '<span class="material-icons">light_mode</span>';
-		// Check local storage or system preference
+
 		if (localStorage.getItem('color-theme') === 'dark'
 				|| (!('color-theme' in localStorage) && window
 						.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -582,8 +562,8 @@
 			document.documentElement.classList.remove('dark');
 			themeToggleBtn.innerHTML = darkIcon;
 		}
+
 		themeToggleBtn.addEventListener('click', function() {
-			// if set via local storage previously
 			if (localStorage.getItem('color-theme')) {
 				if (localStorage.getItem('color-theme') === 'light') {
 					document.documentElement.classList.add('dark');
@@ -595,7 +575,6 @@
 					this.innerHTML = darkIcon;
 				}
 			} else {
-				// if NOT set via local storage previously
 				if (document.documentElement.classList.contains('dark')) {
 					document.documentElement.classList.remove('dark');
 					localStorage.setItem('color-theme', 'light');
