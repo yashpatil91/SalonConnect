@@ -66,7 +66,7 @@
         }
         .sidebar-item-active::after {
             content: '';
-            @apply absolute right-0 top-0 bottom-0 w-1.5  rounded-l-md;
+            @apply absolute right-0 top-0 bottom-0 w-1.5 rounded-l-md;
         }
         .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
@@ -80,8 +80,7 @@
         }
     </style>
 </head>
-<body
-	class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 transition-colors duration-300 overflow-hidden">
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 transition-colors duration-300 overflow-hidden">
 	<div class="flex h-screen overflow-hidden">
 		<aside
 			class="w-64 bg-sidebar-bg dark:bg-surface-dark border-r border-gray-100 dark:border-gray-800 flex flex-col z-20 shadow-soft">
@@ -122,16 +121,17 @@
 					href="#"> <span
 					class="material-symbols-outlined mr-4 text-[22px] group-hover:text-primary transition-colors">settings</span>
 					Settings
-				</a> <span
-					class="material-symbols-outlined mr-4 text-[22px] group-hover:text-primary transition-colors">work</span>
-				<a href="<%=request.getContextPath()%>/therapist/my-applications">
-					My Applications </a>
+				</a> <a
+				 class="flex items-center px-4 py-3.5 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg text-sm font-bold transition-all group"
+				 href="<%=request.getContextPath()%>/therapist/my-applications">
+				<span class="material-symbols-outlined mr-4 text-[22px] group-hover:text-primary transition-colors">work</span>
+				 My Applications
+				  </a>
 
 
 
 			</nav>
-			<div
-				class="p-6 border-t border-gray-100 dark:border-gray-800 mt-auto">
+			<div class="p-6 border-t border-gray-100 dark:border-gray-800 mt-auto">
 				<div class="flex items-center">
 					<div class="relative">
 						<img alt="Therapist Profile"
@@ -149,10 +149,11 @@
 				</div>
 			</div>
 		</aside>
-		<main
-			class="flex-1 flex flex-col overflow-hidden bg-background-light dark:bg-background-dark">
-			<header
-				class="h-24 bg-background-light dark:bg-background-dark border-b border-transparent flex items-center justify-between px-10 z-10">
+		
+		
+		<main class="flex-1 flex flex-col overflow-hidden bg-background-light p-4 dark:bg-background-dark">
+		
+			<header class="h-24 bg-background-light dark:bg-background-dark border-b border-transparent flex items-center justify-between px-10 z-10">
 				<div>
 					<h1
 						class="text-3xl font-display font-bold text-gray-900 dark:text-white">
