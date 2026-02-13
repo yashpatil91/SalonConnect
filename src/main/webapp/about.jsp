@@ -270,6 +270,7 @@ nav a {
 
 <!-- Navbar Section  -->
 <%@ include file="navbar.jsp" %>
+<main class="flex-grow">
 
 <!-- Hero Section -->
 <section class="relative h-[600px] flex items-center justify-center overflow-hidden">
@@ -493,13 +494,13 @@ src="${pageContext.request.contextPath}/images/aboutimage.jpg"
 
       <!-- Buttons -->
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <button class="btn-primary px-10 py-4 font-black rounded-full shadow-lg"><a href="login.jsp">
-          Join the Community
-        </button>
+      <a href="login.jsp" class="btn-primary px-10 py-4 font-black rounded-full shadow-lg inline-block text-center">
+    Join the Community
+</a>
 
-        <button class="btn-outline px-10 py-4 font-black rounded-full"><a href="services.jsp">
-          Explore Services
-        </button>
+       <a href="services.jsp" class="btn-outline px-10 py-4 font-black rounded-full inline-block text-center">
+    Explore Services
+</a>
       </div>
 
     </div>
