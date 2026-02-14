@@ -173,7 +173,7 @@ List<Salon> salons = (List<Salon>) request.getAttribute("salons");
 			</div>
 		</aside>
 
-		<!-- Main Content -->
+		<!-- Main Content bjbjv-->
 		<main
 			class="flex-1 flex flex-col overflow-hidden bg-background-light p-5 dark:bg-background-dark">
 

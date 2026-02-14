@@ -85,7 +85,7 @@
 	class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 transition-colors duration-300 overflow-hidden">
 	<div class="flex h-screen overflow-hidden">
 
-		<!-- Sidebar -->
+		<!-- Sidebar jufjfbjfb-->
 		<aside
 			class="w-64 bg-sidebar-bg dark:bg-surface-dark border-r border-gray-100 dark:border-gray-800 flex flex-col z-20 shadow-soft">
 			<div class="p-8 flex items-center mb-2">
