@@ -340,15 +340,17 @@ boolean isLoggedIn = (loggedUserId != null);
 							<%=city%>
 						</p>
 
-						<!-- ADD THIS HERE -->
-						<p class="text-sm text-primary font-semibold mt-1">
-							Starting from ₹<%=minPrice%>
-						</p>
+						
 
 						<p
 							class="text-gray-500 dark:text-gray-400 text-sm flex items-center gap-1 mb-3">
 							<span class="material-icons text-base">call</span>
 							<%=phone%>
+						</p>
+						
+						<!-- ADD THIS HERE -->
+						<p class="text-sm text-primary font-semibold mt-1">
+							Starting from ₹<%=minPrice%>
 						</p>
 
 						<div class="mb-4">

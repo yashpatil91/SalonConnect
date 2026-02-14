@@ -409,7 +409,7 @@ boolean isLoggedIn = (loggedUserId != null);
 
 						<div
 							class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
-							<a href="customer/salon-details.jsp?id=<%=salonId%>"
+							<a href="${pageContext.request.contextPath}/customer/salon-details.jsp?id=<%=salonId%>"
 								class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-primary dark:hover:bg-primary hover:text-white transition text-center">
 								Book Salon </a>
 						</div>
@@ -557,7 +557,7 @@ boolean isLoggedIn = (loggedUserId != null);
 						String image = rs2.getString("image_url");
 
 						if (image == null || image.trim().equals("")) {
-					image = "images/default-service.jpg";
+					image = "https://images.pexels.com/photos/3992872/pexels-photo-3992872.jpeg";
 						}
 				%>
 
