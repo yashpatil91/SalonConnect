@@ -165,11 +165,12 @@
 							${therapist.salonName} </span>
 					</p>
 
-				</div>
+			</div>
 				<div class="flex items-center space-x-6">
 					
-
-					<!-- button for dark and white mode  hvhv-->
+						<!-- button for dark and white mode  hvhvjebjf-->
+					
+					<!-- button for dark and white mode  hvhvjebjf-->
 					<button
 						class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400"
 						id="theme-toggle">
