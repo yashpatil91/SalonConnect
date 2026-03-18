@@ -138,9 +138,15 @@ h1, h2, h3, h4, h5, h6 {
 				<div
 					class="mt-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-200 px-4 py-3 rounded-lg">
 					You have been logged out</div>
-
+					
 				<%
-				}
+				}else if ("exception".equals(error)) {
+					%>
+					<div class="mt-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 px-4 py-3 rounded-lg">
+					    Something went wrong! Please try again.
+					</div>
+					<%
+					}
 				%>
 
 

@@ -18,12 +18,23 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
+        System.out.println("Login attempt: " + email + " | " + password); // 🔥 DEBUG
+
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
 
         try {
             con = DBConnection.getConnection();
+
+            // 🔴 CHECK if connection failed
+            if (con == null) {
+                System.out.println("DB Connection is NULL ❌");
+                response.sendRedirect(request.getContextPath() + "/login.jsp?error=exception");
+                return;
+            }
+
+            System.out.println("DB Connected ✅");
 
             String sql = "SELECT id, name, email, role FROM users WHERE email = ? AND password = ?";
             ps = con.prepareStatement(sql);
@@ -35,10 +46,11 @@ public class LoginServlet extends HttpServlet {
             if (rs.next()) {
 
                 int userId = rs.getInt("id");
-                String role = rs.getString("role") != null 
-                        ? rs.getString("role").trim() 
+                String role = rs.getString("role") != null
+                        ? rs.getString("role").trim()
                         : "";
 
+                System.out.println("Login SUCCESS for: " + email + " Role: " + role); // 🔥 DEBUG
 
                 // ✅ Create session
                 HttpSession session = request.getSession();
@@ -62,13 +74,16 @@ public class LoginServlet extends HttpServlet {
                 }
 
             } else {
-                // ❌ Invalid credentials
+                System.out.println("Login FAILED ❌ for: " + email); // 🔥 DEBUG
                 response.sendRedirect(request.getContextPath() + "/login.jsp?error=invalid");
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("EXCEPTION OCCURRED ❌");
+            e.printStackTrace(); // 🔥 VERY IMPORTANT
+
             response.sendRedirect(request.getContextPath() + "/login.jsp?error=exception");
+
         } finally {
             try { if (rs != null) rs.close(); } catch (Exception ignored) {}
             try { if (ps != null) ps.close(); } catch (Exception ignored) {}
