@@ -2,7 +2,7 @@ FROM tomcat:11.0
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY SalonNexas.war /usr/local/tomcat/webapps/ROOT.war
+COPY Salon-Nexas.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 
