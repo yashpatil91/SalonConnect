@@ -16,8 +16,8 @@ public class EmailUtility {
     // Email configuration - Update these with your SMTP settings
     private static final String SMTP_HOST = "smtp.gmail.com";
     private static final String SMTP_PORT = "587";
-    private static final String FROM_EMAIL = "patilsoftwares22@gmail.com"; // Update this
-    private static final String FROM_PASSWORD = "ixsvbbqhnoiexrur"; // Update this (use app password for Gmail)
+    private static final String FROM_EMAIL = "example@gmail.com"; // Update this
+    private static final String FROM_PASSWORD = ""; // Update this (use app password for Gmail)
 
     /**
      * Send email notification
