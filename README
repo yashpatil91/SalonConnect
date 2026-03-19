@@ -1,0 +1,87 @@
+# 💇‍♂️ SalonConnect – Online Salon Booking System
+
+## 🚀 Live Demo
+
+🔗 https://salonconnect-1-g2j8.onrender.com/
+
+---
+
+## 📌 Overview
+
+SalonConnect is a full-stack web application that allows users to book salon services online.
+It supports multiple roles like **Customer, Therapist, and Owner** with dedicated dashboards.
+
+---
+
+## ✨ Features
+
+* 🔐 User Authentication (Login/Register)
+* 👤 Role-Based Access (Admin / Owner / Therapist / Customer)
+* 📅 Appointment Booking System
+* 🕒 Time Slot Management 
+* 📊 Dashboard with Analytics
+* 📩 Email Notifications 
+* 🗂️ Booking History Tracking
+
+---
+
+## 🛠️ Tech Stack
+
+* **Backend:** Java, Servlets, JSP
+* **Frontend:** HTML, CSS, Bootstrap
+* **Database:** MySQL (Railway Cloud DB)
+* **Server:** Apache Tomcat 11 (Jakarta EE)
+* **Deployment:** Docker + Render
+
+---
+
+## 🗄️ Database
+
+* Hosted on Railway (Cloud MySQL)
+* Tables include:
+
+  * users
+  * appointments
+  * services
+  * therapist_requests
+
+---
+
+## 📂 Project Structure
+
+```
+src/main/java     → Servlets, DAO, Models
+src/main/webapp   → JSP, CSS, UI
+Dockerfile        → Deployment config
+*.war             → Compiled application
+```
+
+---
+
+## ⚙️ How to Run Locally
+
+1. Import project in Eclipse
+2. Configure MySQL database
+3. Run on Apache Tomcat 11
+4. Open browser: http://localhost:8080/
+
+---
+
+## 📸 Screenshots
+
+
+
+---
+
+## 👨‍💻 Author
+
+**Yash Patil**
+
+---
+
+## 📌 Notes
+
+* This project is deployed using Docker container on Render.
+* Database is connected via Railway cloud.
+
+---
